@@ -11,6 +11,7 @@ public class Vhr2ApplicationTests {
 
 	@Test
 	public void contextLoads() {
+		System.out.println(".");
 	}
 
 }

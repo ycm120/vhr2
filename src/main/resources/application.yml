@@ -1,7 +1,7 @@
 server:
   port: 18080
-# redis 信息
-spring:  redis:    database: 0
+spring:  # redis配置
+  redis:    database: 0
     password:
     port: 6379
     host: 127.0.0.1
@@ -9,4 +9,13 @@ spring:  redis:    database: 0
         max-wait: 1ms
         max-active: 10
         min-idle: 5
-      shutdown-timeout: 100ms
+      shutdown-timeout: 100ms  # mysql配置
+  datasource:    type: com.alibaba.druid.pool.DruidDataSource
+    url: jdbc:mysql://127.0.0.1:3306/vhr?useUnicode=true&characterEncoding=utf8mb4&serverTimezone=UTC
+    username: root
+    password: 122700
+  # 缓存配置
+  cache:    cache-names:    - menus_cache
+    redis:      time-to-live: 1800s
+# mybatis配置文件
+mybatis:  mapper-locations: classpath:mapping/*/*.xml #这里是mapper的配置文
