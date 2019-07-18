@@ -18,4 +18,5 @@ spring:  # redis配置
   cache:    cache-names:    - menus_cache
     redis:      time-to-live: 1800s
 # mybatis配置文件
-mybatis:  mapper-locations: classpath:mapping/*/*.xml #这里是mapper的配置文
+mybatis:
+  config-location: classpath:mybatis-config.xml  mapper-locations: classpath:mapping/**.xml #这里是mapper的配置文
